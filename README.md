@@ -108,10 +108,36 @@ Texts is a production-grade chat platform that supports real-time messaging, use
 ### Prerequisites
 
 - Node.js (v18+ recommended)
-- MongoDB instance (local or cloud)
+- Docker & Docker Compose
+- MongoDB instance (local or cloud, or use the provided Docker container)
 - Cloudinary account (for image uploads)
 
-### Installation
+### Environment Variables
+
+1. Copy the example environment file:
+   ```sh
+   cp backend/.env.example backend/.env
+   ```
+2. Open `backend/.env` and fill in your own credentials for:
+   - `MONGODB_URI` (or use the default for the Docker MongoDB container)
+   - `JWT_SECRET`
+   - `CLOUDINARY_CLOUD_NAME`
+   - `CLOUDINARY_API_KEY`
+   - `CLOUDINARY_API_SECRET`
+   - `NODE_ENV`
+
+### Installation (Docker)
+
+1. Build and start all services using Docker Compose:
+   ```sh
+   docker-compose up --build
+   ```
+2. The frontend will be available at [http://localhost:3000](http://localhost:3000)
+3. The backend API will be available at [http://localhost:5001](http://localhost:5001)
+
+### Installation (Manual/Local)
+
+If you prefer to run without Docker, follow these steps:
 
 ```bash
 # Clone the repository
