@@ -23,6 +23,8 @@ app.use(cors({
   credentials: true,
 }));
 
+app.get("/health", (req, res) => res.sendStatus(200));
+
 // Mount authentication routes
 app.use("/api/auth", authRoutes);
 app.use("/api/messages", messageRoutes);
