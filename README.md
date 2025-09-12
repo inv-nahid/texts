@@ -126,7 +126,7 @@ Texts is a production-grade chat platform that supports real-time messaging, use
    - `CLOUDINARY_API_SECRET`
    - `NODE_ENV`
 
-### Installation (Docker)
+### Installation (Docker) [Future Optimization of Docker, currently broke the code, will setup later]
 
 1. Build and start all services using Docker Compose:
    ```sh
@@ -137,7 +137,7 @@ Texts is a production-grade chat platform that supports real-time messaging, use
 
 ### Installation (Manual/Local)
 
-If you prefer to run without Docker, follow these steps:
+For now please run without Docker, follow these steps:
 
 ```bash
 # Clone the repository
@@ -198,6 +198,7 @@ npm run dev --prefix backend
 
 ## Future Improvements
 
+- Docker containerization
 - Automated test suite (Jest, React Testing Library)
 - Group chats and message reactions
 - Message search and filtering
